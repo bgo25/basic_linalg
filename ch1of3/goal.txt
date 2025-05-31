@@ -1,0 +1,16 @@
+GOAL:
+-----
+	i) Implement the basic vector operations in C
+	ii) make them callable in Python 
+
+METHODOLOGY:
+------------
+The C functions are compiled into a .dll library,
+later loaded in Python using the ctypes module.
+
+
+REMARKS:
+--------
+To compile the .c to .dll:
+cl /LD vector_operations.c /Fevector_operations.dll
+
