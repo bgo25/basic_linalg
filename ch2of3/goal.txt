@@ -1,0 +1,5 @@
+GOAL
+----
+
+ - Implement the class "Vettore" in C++
+ - Parallelize vector operations on CPU
