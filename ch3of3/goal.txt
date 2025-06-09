@@ -1,0 +1,22 @@
+Goal of Chapter 3 of 3
+----------------------
+
+Implement in CUDA a simple matrix multiplicaiton, so to familiarize with:
+host, device, kernel and the absolutely *fundamental* idea that
+each thread can be associated with an unique 3d-tuple literally
+located in the graphic card architecture. Call this: (i, j, k).
+
+The philosophy is the following.
+You have a task.
+You SUBDIVIDE this task in many sub-tasks, such that they can be
+logically executed in parallel.
+Then, you label each subtask with a tuple (i,j,k), so that each subtask
+corresponds univocally to a thread-tuple.
+
+In practice, sometimes 1-dimension tuples suffices.
+For instance, if you have a simple PARALLELIZED FOR, from 0 to N,
+each thread can be (0,1,1), (1,1,1), ..., (N,1,1).
+
+Further remarks:
+CPU memory -> transfer to GPU -> run kernel ->
+	-> transfer back to CPU -> FREE the memory.
